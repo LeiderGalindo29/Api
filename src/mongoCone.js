@@ -1,13 +1,12 @@
-const mongoConnection = require('mongoose');
-const conexionBD=async()=>{
-    
-    try{
-        const DB=await mongoConnection.connect('mongodb+srv://<Leider>:<90zrFTLT7RU4P6ET>@cluster0.exdvozw.mongodb.net/?retryWrites=true&w=majority');
-        console.log("Conexión satisfactoria",DB.connection.name);
-    }
-    catch(error){
-        console.log(error);
-    }
-}
+const mongoose = require('mongoose');
+//require('dotenv').config();
 
-module.exports=conexionBD;
+const connectDB = async()=>{
+      try{
+            await mongoose.connect("mongodb+srv://Leider:12345@cluster0.n9alpov.mongodb.net/Disquera?retryWrites=true&w=majority");
+            console.log(`conectado`)
+      }catch(error){
+            console.error(error);
+      }
+}
+module.exports = {connectDB}
