@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
-//require('dotenv').config();
+require('dotenv').config();
 
 const connectDB = async()=>{
       try{
-            await mongoose.connect("mongodb+srv://Leider:12345@cluster0.n9alpov.mongodb.net/Disquera?retryWrites=true&w=majority");
+            await mongoose.connect(process.env.MONGO_URL);
             console.log(`conectado`)
       }catch(error){
             console.error(error);
