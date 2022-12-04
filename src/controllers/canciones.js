@@ -36,7 +36,7 @@ exports.edit = async(req, res) => {
     const newcancion = new cancion(req.body)
     //console.log(`El id que se va a cambiar estado es ${id}`);
     const cambiocancion = await cancion.findByIdAndUpdate(id, newcancion);
-    res.json({ msj: "Habitación actualizada exitosamente"})
+    res.json({ msj: "Cancion actualizada exitosamente"})
   } catch(error) {
     res.status(500).json(error);
   }
