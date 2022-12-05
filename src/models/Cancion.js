@@ -1,12 +1,11 @@
 const { default: mongoose } = require('mongoose');
 
 const schema = mongoose.Schema({
-    nombreCancion: String,
-    fechaGrabacion: Date,
-    duracionCancion: String,
+    duracionCancion: String,  
+    estadoCancion: String,
+    fechaGrabacion: String,
     idAlbumFK : String,
-    estadoCancion: String, 
-    _id: String
+    nombreCancion: String   
   });
   
   module.exports=mongoose.model('Cancion',schema);

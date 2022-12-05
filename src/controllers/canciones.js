@@ -23,7 +23,7 @@ exports.add = async (req, res) => {
     const newcancion = new cancion(req.body)
     await newcancion.save();
     console.log(newcancion);
-    res.json({ msj: "Habitación registrada exitosamente", id: newcancion._id })
+    res.json({ msj: "Cancion registrada exitosamente", id: newcancion._id })
   } catch (error) {
     res.status(500).json({msj:"Error al registrar"+error})
   }

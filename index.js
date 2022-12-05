@@ -10,6 +10,8 @@ app.use(express.json());
 //app.use('/public', express.static('public/upload'));
 //app.use('/public', express.static(__dirname + '/public'));
 app.use('/api', require('./src/routes/canciones.routes'));
+app.use('/api', require('./src/routes/albumes.routes'));
+app.use('/api', require('./src/routes/generos.routes'));
 //app.use("/api",rutasAlbum);
 //app.use("/api",rutasGenero);
 
