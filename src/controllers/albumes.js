@@ -9,8 +9,8 @@ exports.obtener = async (req, res) => {
 
 exports.obtenerid = async (req, res) => {
   try {
-    const id = req.params.id;
-    const albumes = await album.findById(id);
+    const _id = req.params.id;
+    const albumes = await album.findById(_id);
     res.status(200).json(albumes);
   } catch (error) {
     res.status(500).json(error)
